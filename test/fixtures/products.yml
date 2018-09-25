@@ -3,11 +3,13 @@
 one:
   brand: MyString
   name: MyString
+  type_name: MyString
   description: MyString
   comment_id: 1
 
 two:
   brand: MyString
   name: MyString
+  type_name: MyString
   description: MyString
   comment_id: 1
