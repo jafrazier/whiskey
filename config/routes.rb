@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  resources :products
+  resources :products do
+    resources :comments
+  end
   get 'comments/new'
   get 'comments/create'
   get 'comments/show'
