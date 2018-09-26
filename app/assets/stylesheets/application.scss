@@ -124,7 +124,7 @@ q {
 .highlight {
   padding: 10px;
   width:95%;
-  height: 500px;
+  height:550px;
   color: rgb(0,0,0);
   font-size: 17px;
   transition: all ease 1s;
@@ -153,13 +153,13 @@ q {
 
 .item img {
   width: 95%;
-  height: 40%;
+  height: 37%;
   margin-bottom:30px;
   transition: all ease .5s;
 }
 .item img:hover {
   width: 96%;
-  height: 40.4%;
+  height: 37.37%;
   opacity: .7;
   filter: grayscale(50%);
   box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.5);
@@ -193,8 +193,10 @@ q {
 .productContainer{
   width: 100vw;
   height: 100vh;
-  // background: rgb(33,33,33);
   background: url('/wood-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: scroll;
 }
 .productShow{
@@ -218,56 +220,62 @@ q {
 }
 
 
-@media only screen and (max-width: 1040px) {
-    .title {
-        font-size:4em;
-        margin-top:15%;
-    }
-    .pop {
-      width: 60%;
-      height: 20%;
-      left: 20%;
-      top: 35vh;
-    }
-    .midtext {
-      margin-top: 100px;
-      width: 75%;
+// @media only screen and (max-width: 1040px) {
+//     .title {
+//         font-size:4em;
+//         margin-top:15%;
+//     }
+//     .pop {
+//       width: 60%;
+//       height: 20%;
+//       left: 20%;
+//       top: 35vh;
+//     }
+//     .midtext {
+//       margin-top: 100px;
+//       width: 75%;
+//
+//     }
+//     .site{
+//       margin-top: 75px;
+//     }
+//
+// }
 
-    }
-    .site{
-      margin-top: 75px;
-    }
+// @media only screen and (max-width: 414px) {
+//   .title {
+//     font-size:3em;
+//   }
+//   .pop {
+//     width: 80%;
+//     left: 10%;
+//   }
+//   q {
+//     font-size: .95em;
+//   }
+//   .midtext {
+//     margin-top: 30px;
+//     font-size: .9em
+//   }
+//   .site{
+//     font-size:40px;
+//   }
+//   .highlight {
+//     height: auto;
+//   }
+//
+//
+// }
 
-}
-
-@media only screen and (max-width: 414px) {
-    .title {
-        font-size:3em;
-    }
-    .pop {
-    width: 80%;
-    left: 10%;
-    }
-    q{
-      font-size: .95em;
-    }
-  .midtext {
-    margin-top: 30px;
-    font-size: .9em
-  }
-  .site{
-    font-size:40px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-    q {
-    font-size: .8em;
-    }
-  .midtext {
-    font-size: .8em;
-  }
-  .site{
-    font-size:25px;
-  }
-}
+// @media only screen and (max-width: 360px) {
+//     q {
+//     font-size: .8em;
+//     }
+//   .midtext {
+//     font-size: .8em;
+//   }
+//   .site{
+//     font-size:25px;
+//   }
+//
+// }
