@@ -1,16 +1,10 @@
+<div class="productContainer">
 <%= render 'layouts/nav' %>
+<div class="productShow">
+  <h2><%= @product.brand %> - <%= @product.name %></h2>
 <p id="notice"><%= notice %></p>
 <%= image_tag(@product.image) %>
-<p>
-  <strong>Brand:</strong>
-  <%= @product.brand %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
+<div class="productInfo">
 <p>
   <strong>Type name:</strong>
   <%= @product.type_name %>
@@ -25,6 +19,10 @@
   <strong>Comment:</strong>
   <%= @product.comment_id %>
 </p>
-
+</div>
+<a href="https://www.google.com/search?q=<%=@product.brand%>%20<%=@product.name%>&source=lnms&tbm=shop" target="_blank">Buy</a> |
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+</div>
+</div>
