@@ -1,0 +1,2 @@
+module ScotchHelper
+end

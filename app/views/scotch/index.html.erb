@@ -1,0 +1,23 @@
+<%= render 'layouts/nav' %>
+<div class="container-fluid">
+  <div class="row titleRow">
+    <div class="col-lg-12 secName">
+      <h2 class="title">Scotch</h2>
+    </div>
+  </div>
+  <div class="row">
+    <% @products.where(type_name:'scotch').reverse.each do |x| %>
+    <div class="col-lg-3 col-sm-12 sub-item1 item">
+      <div class="highlight">
+        <%= image_tag(x.image) %>
+        <div class="info">
+          <h5><%= x.brand %> - <%= x.name %></h5>
+          <p><%= x.description%></p>
+          <button type="button" name="button" class="btn-info"><%= link_to 'More Info', product_path(x) %></button>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>

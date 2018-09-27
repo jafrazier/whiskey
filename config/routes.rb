@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'scotch/index'
+  get 'bourbon/index'
   root 'pages#home'
   resources :products do
     resources :comments
   end
+  resources :whiskey
+  resources :bourbon
+  resources :scotch
   get 'comments/new'
   get 'comments/create'
   get 'comments/show'
