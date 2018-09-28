@@ -1,6 +1,10 @@
 <%= render 'layouts/nav' %>
+<%if current_user && admin?%>
 <h1>New Product</h1>
 
 <%= render 'form', product: @product %>
 
 <%= link_to 'Back', products_path %>
+<%else%>
+<p>User not autherized</p>
+<%end%>

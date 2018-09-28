@@ -26,6 +26,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.product_id = params[:product_id]
+    @comment.author_id = current_user.id
+    @comment.author = current_user
       if @comment.save
         redirect_to product_path(@comment.product_id)
       else
@@ -65,6 +67,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:author_id, :title, :content, :product_id)
+      params.require(:comment).permit(:author_id, :title, :content, :product_id, :author)
     end
 end
