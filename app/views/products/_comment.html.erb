@@ -6,4 +6,5 @@
   <% User.all.where(id: comment.author_id).each do |a|%>
   <p>Reviewed by: <%= a.first_name %> <%= a.last_name %> on <%= comment.created_at.strftime("%D")%> </p>
   <%end%>
+  
 </div>

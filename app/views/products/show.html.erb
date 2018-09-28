@@ -1,5 +1,13 @@
 <div class="productContainer">
 <%= render 'layouts/nav' %>
+<div class="popup">
+  <div class="reg">
+    <%= render 'devise/registrations/form'%>
+  </div>
+  <div class="log">
+    <%= render 'devise/sessions/form'%>
+  </div>
+</div>
 <div class="productShow">
   <h2><%= @product.brand %> - <%= @product.name %>  <%if current_user && admin? %><%= link_to 'Edit', edit_product_path(@product) %>  <%end%></h2>
 <p id="notice"><%= notice %></p>
@@ -22,7 +30,7 @@
   <strong>More Info:</strong>
   <%= @product.more_info %>
 </p>
-<button type="button" name="button" class="btn-primary"><a href="https://www.google.com/search?q=<%=@product.brand%>%20<%=@product.name%>&source=lnms&tbm=shop" target="_blank">Buy on Google</a></button>
+<button type="button" name="button" class="buy"><a href="https://www.google.com/search?q=<%=@product.brand%>%20<%=@product.name%>&source=lnms&tbm=shop" target="_blank">Buy on Google</a></button>
 </div>
 <hr class="break">
 <%if current_user %>

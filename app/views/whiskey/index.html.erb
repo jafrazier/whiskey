@@ -1,10 +1,10 @@
-<%= render 'layouts/nav' %>
-<div class="container-fluid">
+<div class="productContainer">
   <div class="row titleRow">
     <div class="col-lg-12 secName">
       <h2 class="title">Whiskey</h2>
     </div>
   </div>
+  <%= render 'layouts/nav' %>
   <div class="row">
     <% @products.where(type_name:'whiskey').reverse.each do |x| %>
     <div class="col-lg-3 col-sm-12 sub-item1 item">

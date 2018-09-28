@@ -41,6 +41,11 @@ body {
 nav {
   z-index: 3;
 }
+nav li.nav-item {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+}
 .bg-light {
   background-color: rgba(255, 255, 255, .01) !important;
 }
@@ -61,6 +66,127 @@ nav {
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: rgb(200, 200, 200);
+}
+
+.hello{
+  position: absolute;
+  color: rgb(240,240,240);
+  width: 40vw;
+  left: 30vw;
+  text-align: center;
+  top:2.2vh;
+  font-size: 1.5em;
+}
+
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.5);
+  z-index: 3;
+}
+
+.reg, .log {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: rgb(240,240,240);
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .7);
+
+}
+.log {
+  height: 300px;
+}
+.reg h2, .log h2 {
+  color: rgba(0,0,0,.7);
+  width: 100%;
+  background: rgb(203,157,29);
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.reg input, .log input {
+  width: 280px;
+  margin-left: 10px;
+}
+
+.reg label, .log label {
+  margin-left: 10px;
+
+}
+.actions input{
+  position: absolute;
+  bottom:15px;
+  left: 0px;
+  width: 45%;
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(113,188,120);
+  color: rgb(240,240,240);
+  transition: all ease .5s;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+  border: none;
+  outline: none;
+}
+.actions input:hover {
+  opacity: .8;
+  color: rgb(0,0,0);
+  bottom:14px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, .5);
+}
+.actions input:active {
+  bottom:10px;
+  box-shadow: none;
+
+}
+.buy {
+  background: rgb(205,51,51);
+  opacity: 1;
+  width:150px;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 9px;
+  border: none;
+  color: rgb(240,240,240);
+  border-radius: 10px;
+  text-shadow: none;
+  transition: all ease .5s;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+  outline: none;
+
+}
+.actions button,{
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  background: rgb(205,51,51);
+  opacity: 1;
+  width: 45%;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 9px;
+  border: none;
+  color: rgb(240,240,240);
+  border-radius: 10px;
+  text-shadow: none;
+  transition: all ease .5s;
+  margin-right: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+  outline: none;
+}
+.actions button:hover {
+  opacity: .8;
+  border: none;
+  bottom:14px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, .5);
+}
+.actions button:active {
+  bottom:10px;
+  box-shadow: none;
 }
 .container-fluid {
   width: 100vw;
@@ -316,6 +442,8 @@ q {
   .site{ font-size: 5vh; top:5vh;}
   .titleRow{height: 13vh;}
   .title{font-size: 6em; text-shadow: -15px -15px 2px rgba(0, 0, 0,.6),0px -3px black; margin-top: 4%;}
+  .hello{left:40vw;}
+
 }
 
 
@@ -333,6 +461,9 @@ q {
   .title{font-size: 3em; text-shadow: -10px -20px 2px rgba(0, 0, 0,.6),0px -3px black; margin-top: 8%;}
   .productShow img{margin-bottom: 10px;}
   .productShow {width: 90%;}
+  .hello {
+    font-size: 1.3em;
+  }
 }
 
 @media only screen and (max-width: 321px){

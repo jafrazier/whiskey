@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.product_id = params[:product_id]
     @comment.author_id = current_user.id
-    @comment.author = current_user
+    # @comment.author = current_user
       if @comment.save
         redirect_to product_path(@comment.product_id)
       else
@@ -39,13 +39,15 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
-    respond_to do |format|
+    @product = Product.find(params[:id])
+    @comment = Comment.new(comment_params)
+    @comment.product_id = params[:product_id]
+    @comment.author_id = current_user.id
       if @comment.update(comment_params)
-        redirect_to article_path(@comment.article)
+        redirect_to product_path(@comment.product_id)
       else
         format.html { render :edit }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
     end
   end
 
