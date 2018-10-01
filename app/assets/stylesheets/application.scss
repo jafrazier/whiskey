@@ -88,7 +88,7 @@ nav li.nav-item {
   z-index: 3;
 }
 
-.reg, .log {
+.reg, .log , .newPro, .userEdit{
   position: relative;
   width: 300px;
   height: 500px;
@@ -101,7 +101,7 @@ nav li.nav-item {
 .log {
   height: 300px;
 }
-.reg h2, .log h2 {
+.reg h2, .log h2 , .newPro h2, .userEdit h2{
   color: rgba(0,0,0,.7);
   width: 100%;
   background: rgb(203,157,29);
@@ -109,13 +109,21 @@ nav li.nav-item {
   margin: 0;
   margin-bottom: 5px;
 }
-.reg input, .log input {
-  width: 280px;
-  margin-left: 10px;
+.reg input, .log input, .newPro input, .newPro textarea, .userEdit input, .userEdit p {
+  width: 90%;
+  margin-left: 5%;
 }
+.newPro{
+  height: 600px;
+}
+.userEdit{
+  margin-top: 25px;
+  height: 650px;
+  width: 450px;
 
-.reg label, .log label {
-  margin-left: 10px;
+}
+.reg label, .log label, .newPro label, .userEdit label,  {
+  margin-left: 5%;
 
 }
 .actions input{
@@ -159,7 +167,7 @@ nav li.nav-item {
   outline: none;
 
 }
-.actions button,{
+.actions button{
   position: absolute;
   bottom: 15px;
   right: 0px;
@@ -187,6 +195,12 @@ nav li.nav-item {
 .actions button:active {
   bottom:10px;
   box-shadow: none;
+}
+input.delete {
+  background: rgb(205,51,51);
+  position: relative;
+  width: 200px;
+
 }
 .container-fluid {
   width: 100vw;
