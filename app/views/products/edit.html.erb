@@ -1,7 +1,11 @@
+<div class="productContainer">
 <%= render 'layouts/nav' %>
-<h1>Editing Product</h1>
-
+<%if current_user && admin?%>
+<div class="newPro">
+<h2>Edit Product</h2>
 <%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+</div>
+<%else%>
+<p>User not autherized</p>
+<%end%>
+</div>
