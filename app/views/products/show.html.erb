@@ -30,7 +30,7 @@
   <strong>More Info:</strong>
   <%= @product.more_info %>
 </p>
-<button type="button" name="button" class="buy"><a href="https://www.google.com/search?q=<%=@product.brand%>%20<%=@product.name%>&source=lnms&tbm=shop" target="_blank">Buy on Google</a></button>
+<button type="button" name="button" class="buy" id="buy"><a href="'https://www.google.com/search?q=<%=@product.brand%>%20<%=@product.name%>&source=lnms&tbm=shop'" target="_blank">Buy on Google</a></button>
 </div>
 <hr class="break">
 <%if current_user %>
@@ -38,7 +38,7 @@
 <%else%>
 <p>Sign up to leave a review</p>
 <%end%>
-<div class="commentContent">
+<div class="commentContent" >
   <h3>Reviews(<%= @product.comments.size %>)</h3>
   <%= render partial: 'products/comment', collection: @product.comments.reverse %>
 </div>

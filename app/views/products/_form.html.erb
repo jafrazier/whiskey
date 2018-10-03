@@ -19,12 +19,14 @@
   <div class="field">
     <%= form.label :name %><br>
     <%= form.text_field :name %>
+  </div><br>
+
+  <div class="field product_type">
+    <%= form.label :type_name ,'Type' %>
+    <%= form.select :type_name, options_for_select(%w[whiskey bourbon scotch])%>
   </div>
 
-  <div class="field">
-    <%= form.label :type_name %><br>
-    <%= form.text_field :type_name %>
-  </div>
+
 
   <div class="field">
     <%= form.label :description %><br>
