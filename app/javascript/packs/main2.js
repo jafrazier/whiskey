@@ -7,12 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
       message: "finally"
     }
   })
-  const buy = new Vue({
-    el: "#buy",
-    data: {
-      googleBuy:
-    }
-
-  })
-
+  
 })
