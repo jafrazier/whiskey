@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    
+
     @comment = Comment.new
     @comment.product_id = @product.id
   end
@@ -72,6 +72,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:brand, :name, :type_name, :description, :comment_id, :image, :abv, :more_info)
+      params.require(:product).permit(:brand, :name, :type_name, :description, :comment_id, :photo, :abv, :more_info)
     end
 end
