@@ -17,7 +17,7 @@
           <div id="vuetest">
             {{ message }}
           </div>
-      
+
 
 
 
@@ -51,11 +51,11 @@
         <h2 class="title">Whiskey</h2>
       </div>
     </div>
-    <div class="row">
+      <if
       <% @products.where(type_name:'whiskey').reverse.each do |x| %>
       <div class="col-lg-3 col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.image) %>
+          <%= image_tag(x.photo.url) %>
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>
@@ -76,7 +76,7 @@
       <% @products.where(type_name:'bourbon').reverse.each do |x| %>
       <div class="col-lg-3  col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.image) %>
+          <%= image_tag(x.photo.url) %>
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>
@@ -98,7 +98,7 @@
       <% @products.where(type_name:'scotch').reverse.each do |x| %>
       <div class="col-lg-3  col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.image) %>
+          <%= image_tag(x.photo.url) %>
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>
