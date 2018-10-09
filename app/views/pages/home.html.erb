@@ -51,7 +51,6 @@
         <h2 class="title">Whiskey</h2>
       </div>
     </div>
-      <if
       <% @products.where(type_name:'whiskey').reverse.each do |x| %>
       <div class="col-lg-3 col-sm-12 sub-item1 item">
         <div class="highlight">
@@ -64,9 +63,9 @@
         </div>
       </div>
       <% end %>
-
     </div>
     <br>
+
     <div class="row titleRow" id="bourbon">
       <div class="col-lg-12 secName">
         <h2 class="title">Bourbon</h2>
