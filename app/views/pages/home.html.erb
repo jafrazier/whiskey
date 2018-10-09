@@ -1,6 +1,6 @@
 
 <header>
-  <%= render 'layouts/nav' %>
+  <%= render 'layouts/home' %>
 </header>
 <h1 class="site">The Whiskey Man</h1>
 <div class="container-fluid top">
@@ -46,7 +46,7 @@
 
 
   <div class="container-fluid">
-    <div class="row titleRow">
+    <div class="row titleRow" id="whiskey">
       <div class="col-lg-12 secName">
         <h2 class="title">Whiskey</h2>
       </div>
@@ -55,7 +55,7 @@
       <% @products.where(type_name:'whiskey').reverse.each do |x| %>
       <div class="col-lg-3 col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.photo.url) %>
+          <img src="<%= x.photo %>" alt="">
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>
@@ -67,7 +67,7 @@
 
     </div>
     <br>
-    <div class="row titleRow">
+    <div class="row titleRow" id="bourbon">
       <div class="col-lg-12 secName">
         <h2 class="title">Bourbon</h2>
       </div>
@@ -76,7 +76,7 @@
       <% @products.where(type_name:'bourbon').reverse.each do |x| %>
       <div class="col-lg-3  col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.photo.url) %>
+          <img src="<%= x.photo %>" alt="">
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>
@@ -89,7 +89,7 @@
     </div>
     <br>
 
-    <div class="row titleRow">
+    <div class="row titleRow" id="scotch">
       <div class="col-lg-12 secName">
         <h2 class="title">Scotch</h2>
       </div>
@@ -98,7 +98,7 @@
       <% @products.where(type_name:'scotch').reverse.each do |x| %>
       <div class="col-lg-3  col-sm-12 sub-item1 item">
         <div class="highlight">
-          <%= image_tag(x.photo.url) %>
+          <img src="<%= x.photo %>" alt="">
           <div class="info">
             <h5><%= x.brand %> - <%= x.name %></h5>
             <p><%= x.description%></p>

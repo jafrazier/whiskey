@@ -7,7 +7,7 @@
     <% @products.reverse.each do |x| %>
     <div class="col-lg-3 col-md-6 col-sm-12 sub-item1 item">
       <div class="highlight">
-        <%= image_tag(x.photo.url) %>
+        <%= image_tag(x.photo) %>
         <div class="info">
           <h5><%= x.brand %> - <%= x.name %></h5>
           <p><%= x.description%></p>
