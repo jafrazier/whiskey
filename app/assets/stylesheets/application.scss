@@ -209,7 +209,7 @@ input.delete {
 .row {
   width: 100vw;
   height: auto;
-  padding: 0 20px;  
+  padding: 0 20px;
 }
 
 .jumbotron.pop {
@@ -238,6 +238,10 @@ input.delete {
 }
  p {
   text-align: left;
+}
+
+#intro {
+  font-size: 1.7em;
 }
 .newP {
   color: rgba(0,0,0,.7);
